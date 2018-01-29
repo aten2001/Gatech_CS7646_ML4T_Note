@@ -1,0 +1,641 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Reference</title>
+
+    <style>
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .cd {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all.js"></script>
+  </head>
+
+  <body class="index" data-languages="[&quot;python&quot;,&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar.png" alt="Navbar" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/ML4T_logo.png" class="logo" alt="Ml4t logo" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="python">python</a>
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <div id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introduction" class="toc-h1 toc-link" data-title="introduction">Introduction</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#example-code" class="toc-h2 toc-link" data-title="example-code">Example Code</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#environment-setup" class="toc-h1 toc-link" data-title="environment-setup">Environment Setup</a>
+          </li>
+          <li>
+            <a href="#hw1-assess-portfolio" class="toc-h1 toc-link" data-title="hw1-assess-portfolio">HW1: Assess Portfolio</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#pipeline-for-assessing-portfolio-value" class="toc-h2 toc-link" data-title="pipeline-for-assessing-portfolio-value">Pipeline for Assessing Portfolio Value</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#hw2-optimize-something" class="toc-h1 toc-link" data-title="hw2-optimize-something">HW2: Optimize Something</a>
+          </li>
+          <li>
+            <a href="#errors" class="toc-h1 toc-link" data-title="errors">Errors</a>
+          </li>
+      </div>
+        <ul class="toc-footer">
+            <li><a href='#'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
+        </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introduction'>Introduction</h1>
+<p>Welcome to Gorgia Tech Machine Learning for Trading (ML4T, CS7646) Spring 2018 notes. This static website is used
+as a tool for myself to document some important information (especially coding examples) while doing homework and studying for exams.
+Official class information can be found <a href="http://quantsoftware.gatech.edu/CS7646_Spring_2018">here</a>.</p>
+
+<p>Author:  Xiaoguang(Jason) Wang  <a href="mailto:xgwang@gatech.edu">xgwang@gatech.edu</a></p>
+<h2 id='example-code'>Example Code</h2>
+<blockquote>
+<p>Example code</p>
+</blockquote>
+<pre class="highlight python tab-python"><code><span class="k">def</span> <span class="nf">function</span><span class="p">():</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre><pre class="highlight shell tab-shell"><code><span class="gp">&gt;&gt;&gt; </span>def <span class="k">function</span><span class="o">()</span>:
+...     a <span class="o">=</span> 1
+</code></pre>
+<p>Example code is shown to the right. To make this line at the same vertical level as the &quot;Example code&quot; section
+in the right panel, this line has to be right after <code>&gt;Example code</code> instead of before. </p>
+<h1 id='environment-setup'>Environment Setup</h1><h1 id='hw1-assess-portfolio'>HW1: Assess Portfolio</h1>
+<p>Here is the link to <a href="http://quantsoftware.gatech.edu/Assess_portfolio">HW1 official page</a>.</p>
+<h2 id='pipeline-for-assessing-portfolio-value'>Pipeline for Assessing Portfolio Value</h2>
+<blockquote>
+<p>1.1 get_data() function from util.py</p>
+</blockquote>
+<pre class="highlight python tab-python"><code><span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span><span class="n">symbols</span><span class="p">,</span> <span class="n">dates</span><span class="p">,</span> <span class="n">addSPY</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">colname</span> <span class="o">=</span> <span class="s">'Adj Close'</span><span class="p">):</span>
+    <span class="s">"""Read stock data (adjusted close) for given symbols from CSV files."""</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">dates</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">addSPY</span> <span class="ow">and</span> <span class="s">'SPY'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">symbols</span><span class="p">:</span>  <span class="c"># add SPY for reference, if absent</span>
+        <span class="n">symbols</span> <span class="o">=</span> <span class="p">[</span><span class="s">'SPY'</span><span class="p">]</span> <span class="o">+</span> <span class="n">symbols</span>
+
+    <span class="k">for</span> <span class="n">symbol</span> <span class="ow">in</span> <span class="n">symbols</span><span class="p">:</span>
+        <span class="n">df_temp</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">symbol_to_path</span><span class="p">(</span><span class="n">symbol</span><span class="p">),</span> <span class="n">index_col</span><span class="o">=</span><span class="s">'Date'</span><span class="p">,</span>
+                <span class="n">parse_dates</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span> <span class="n">usecols</span><span class="o">=</span><span class="p">[</span><span class="s">'Date'</span><span class="p">,</span> <span class="n">colname</span><span class="p">],</span> <span class="n">na_values</span><span class="o">=</span><span class="p">[</span><span class="s">'nan'</span><span class="p">])</span>
+        <span class="n">df_temp</span> <span class="o">=</span> <span class="n">df_temp</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="n">colname</span><span class="p">:</span> <span class="n">symbol</span><span class="p">})</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df_temp</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">symbol</span> <span class="o">==</span> <span class="s">'SPY'</span><span class="p">:</span>  <span class="c"># drop dates SPY did not trade</span>
+            <span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">subset</span><span class="o">=</span><span class="p">[</span><span class="s">"SPY"</span><span class="p">])</span>
+</code></pre>
+<blockquote>
+<p>1.2 Example for preparing <code>symbols</code> and <code>dates</code> variables</p>
+</blockquote>
+<pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="n">pd</span>
+<span class="kn">import</span> <span class="nn">datetime</span> <span class="k">as</span> <span class="n">dt</span>
+
+<span class="n">start_date</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2008</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">end_date</span> <span class="o">=</span> <span class="n">dt</span><span class="o">.</span><span class="n">datetime</span><span class="p">(</span><span class="mi">2009</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">dates</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">date_range</span><span class="p">(</span><span class="n">start_date</span><span class="p">,</span> <span class="n">end_date</span><span class="p">)</span>
+
+<span class="n">symbols</span> <span class="o">=</span> <span class="p">[</span><span class="s">'GOOG'</span><span class="p">,</span><span class="s">'AAPL'</span><span class="p">,</span><span class="s">'GLD'</span><span class="p">,</span><span class="s">'XOM'</span><span class="p">]</span>
+</code></pre>
+<blockquote>
+<p>1.3 Get <code>prices</code> by calling <code>get_data()</code></p>
+</blockquote>
+<pre class="highlight python tab-python"><code><span class="kn">from</span> <span class="nn">util</span> <span class="kn">import</span> <span class="n">get_data</span>
+
+<span class="n">prices_all</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">(</span><span class="n">symbols</span><span class="p">,</span> <span class="n">dates</span><span class="p">)</span>  <span class="c"># automatically adds SPY</span>
+<span class="n">prices</span> <span class="o">=</span> <span class="n">prices_all</span><span class="p">[</span><span class="n">symbols</span><span class="p">]</span>  <span class="c"># only portfolio symbols</span>
+<span class="n">prices_SPY</span> <span class="o">=</span> <span class="n">prices_all</span><span class="p">[</span><span class="s">'SPY'</span><span class="p">]</span>  <span class="c"># only SPY, for comparison later</span>
+</code></pre>
+<blockquote>
+<p>2.1 Calculate <code>daily_por_values</code></p>
+</blockquote>
+<pre class="highlight python tab-python"><code><span class="c"># normalize price with prices on start date</span>
+<span class="n">prices_norm</span> <span class="o">=</span> <span class="n">prices</span> <span class="o">/</span> <span class="n">prices</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="p">:]</span> 
+
+<span class="c"># initialize allocation by evenly distributing to portfolio stocks</span>
+<span class="n">l</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">symbols</span><span class="p">)</span>
+<span class="n">alloc_init</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">empty</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+<span class="n">alloc_init</span><span class="o">.</span><span class="n">fill</span><span class="p">(</span><span class="mf">1.0</span><span class="o">/</span><span class="n">l</span><span class="p">)</span>  
+
+<span class="c"># apply initial allocation</span>
+<span class="n">prices_alloced</span> <span class="o">=</span> <span class="n">prices_norm</span> <span class="o">*</span> <span class="n">alloc_init</span>  
+<span class="n">daily_por_values</span> <span class="o">=</span> <span class="n">prices_alloced</span><span class="o">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">)</span>
+</code></pre>
+<ol>
+<li><p>Read in individual prices data</p>
+
+<p>Prices data <code>prices</code> are read in as pandas dataframe using the <code>get_data()</code> function from util.py. 
+To call the <code>get_data()</code> function, two input variables <code>symbols</code> and <code>dates</code> are needed.</p>
+
+<table><thead>
+<tr>
+<th>Input Variable</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>symbols</td>
+<td>List of symbol names as string. eg <code>[&#39;APPL&#39;, &#39;GOOL&#39;, &#39;ZTS&#39;]</code></td>
+</tr>
+<tr>
+<td>dates</td>
+<td>DatetimeIndex generated with <code>pandas.date_range()</code> method. See example code 1.2</td>
+</tr>
+</tbody></table></li>
+<li><p>Calculate daily portfolio values</p>
+
+<p>See example code 2.1 for calculating daily portfolio values <code>daily_por_values</code>.</p></li>
+</ol>
+<h1 id='hw2-optimize-something'>HW2: Optimize Something</h1>
+<p>Here is the link to <a href="http://quantsoftware.gatech.edu/Optimize_something">HW2 official page</a>.</p>
+
+<!---
+# Authentication
+
+> To authorize, use this code:
+
+```ruby
+require 'kittn'
+
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+```
+
+```python
+import kittn
+
+api = kittn.authorize('meowmeowmeow')
+```
+
+```shell
+# With shell, you can just pass the correct header with each request
+curl "api_endpoint_here"
+  -H "Authorization: meowmeowmeow"
+```
+
+```javascript
+const kittn = require('kittn');
+
+let api = kittn.authorize('meowmeowmeow');
+```
+
+> Make sure to replace `meowmeowmeow` with your API key.
+
+Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+
+Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+
+`Authorization: meowmeowmeow`
+
+<aside class="notice">
+You must replace <code>meowmeowmeow</code> with your personal API key.
+</aside>
+--->
+
+<!---
+# Kittens
+
+## Get All Kittens
+
+```ruby
+require 'kittn'
+
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+api.kittens.get
+```
+
+```python
+import kittn
+
+api = kittn.authorize('meowmeowmeow')
+api.kittens.get()
+```
+
+```shell
+curl "http://example.com/api/kittens"
+  -H "Authorization: meowmeowmeow"
+```
+
+```javascript
+const kittn = require('kittn');
+
+let api = kittn.authorize('meowmeowmeow');
+let kittens = api.kittens.get();
+```
+
+> The above command returns JSON structured like this:
+
+```json
+[
+  {
+    "id": 1,
+    "name": "Fluffums",
+    "breed": "calico",
+    "fluffiness": 6,
+    "cuteness": 7
+  },
+  {
+    "id": 2,
+    "name": "Max",
+    "breed": "unknown",
+    "fluffiness": 5,
+    "cuteness": 10
+  }
+]
+```
+
+This endpoint retrieves all kittens.
+
+### HTTP Request
+
+`GET http://example.com/api/kittens`
+
+### Query Parameters
+
+Parameter | Default | Description
+--------- | ------- | -----------
+include_cats | false | If set to true, the result will also include cats.
+available | true | If set to false, the result will include kittens that have already been adopted.
+
+<aside class="success">
+Remember — a happy kitten is an authenticated kitten!
+</aside>
+
+## Get a Specific Kitten
+
+```ruby
+require 'kittn'
+
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+api.kittens.get(2)
+```
+
+```python
+import kittn
+
+api = kittn.authorize('meowmeowmeow')
+api.kittens.get(2)
+```
+
+```shell
+curl "http://example.com/api/kittens/2"
+  -H "Authorization: meowmeowmeow"
+```
+
+```javascript
+const kittn = require('kittn');
+
+let api = kittn.authorize('meowmeowmeow');
+let max = api.kittens.get(2);
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "id": 2,
+  "name": "Max",
+  "breed": "unknown",
+  "fluffiness": 5,
+  "cuteness": 10
+}
+```
+
+This endpoint retrieves a specific kitten.
+
+<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
+
+### HTTP Request
+
+`GET http://example.com/kittens/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the kitten to retrieve
+
+## Delete a Specific Kitten
+
+```ruby
+require 'kittn'
+
+api = Kittn::APIClient.authorize!('meowmeowmeow')
+api.kittens.delete(2)
+```
+
+```python
+import kittn
+
+api = kittn.authorize('meowmeowmeow')
+api.kittens.delete(2)
+```
+
+```shell
+curl "http://example.com/api/kittens/2"
+  -X DELETE
+  -H "Authorization: meowmeowmeow"
+```
+
+```javascript
+const kittn = require('kittn');
+
+let api = kittn.authorize('meowmeowmeow');
+let max = api.kittens.delete(2);
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "id": 2,
+  "deleted" : ":("
+}
+```
+
+This endpoint deletes a specific kitten.
+
+### HTTP Request
+
+`DELETE http://example.com/kittens/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the kitten to delete
+
+--->
+<h1 id='errors'>Errors</h1>
+<aside class="notice">
+This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+</aside>
+
+<p>The Kittn API uses the following error codes:</p>
+
+<table><thead>
+<tr>
+<th>Error Code</th>
+<th>Meaning</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>400</td>
+<td>Bad Request -- Your request is invalid.</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized -- Your API key is wrong.</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found -- The specified kitten could not be found.</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone -- The kitten requested has been removed from our servers.</td>
+</tr>
+<tr>
+<td>418</td>
+<td>I&#39;m a teapot.</td>
+</tr>
+<tr>
+<td>429</td>
+<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="python">python</a>
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
